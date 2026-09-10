@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos - Sonido Vivo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-icon">🎸</span>
+      <h1>SONIDO VIVO</h1>
+    </a>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+        <li id="nav-session"></li>
+        <li>
+          <a href="carrito.html" class="cart-icon-btn">
+            🛒 <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Cat&aacute;logo de Instrumentos y Equipos</h2>
+
+    <!-- FILTROS COMBINADOS -->
+    <div class="filtros-bar">
+      <div class="form-group" style="margin:0;">
+        <label for="filter-categoria">Categor&iacute;a:</label>
+        <select id="filter-categoria" class="form-control">
+          <!-- Opciones dinámicas -->
+        </select>
+      </div>
+
+      <div class="form-group" style="margin:0; flex:1; max-width:300px;">
+        <label for="filter-precio">Precio M&aacute;ximo: <strong id="precio-val">$700.000</strong></label>
+        <input type="range" id="filter-precio" min="50000" max="700000" step="10000" value="700000" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- GRID DE PRODUCTOS -->
+    <div class="catalogo-grid" id="catalogo-grid">
+      <!-- Carga dinámica vía JS -->
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>Sonido Vivo - Tienda de Instrumentos Musicales</strong></p>
+    <p>Asignatura: <strong>DSY1104 &ndash; 2026</strong> | Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

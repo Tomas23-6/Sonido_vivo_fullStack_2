@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonido Vivo - Tienda de Instrumentos Musicales</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-icon">🎸</span>
+      <h1>SONIDO VIVO</h1>
+    </a>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+        <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li id="nav-session"></li>
+        <li>
+          <a href="carrito.html" class="cart-icon-btn">
+            🛒 <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h2>Pasi&oacute;n por la M&uacute;sica en Vi&ntilde;a del Mar</h2>
+      <p>Explora nuestro cat&aacute;logo de guitarras, bajos, teclados y equipos de sonido profesional con despacho a todo Chile.</p>
+      <a href="catalogo.html" class="btn-primary">Ver Cat&aacute;logo Completo</a>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS (HERO ZONE) -->
+    <section>
+      <h2 class="section-title">Productos Destacados</h2>
+      <div class="destacados-grid">
+        <article class="card-producto">
+          <span class="badge-oferta">DESTACADO</span>
+          <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=500" alt="Guitarra Yamaha F310" class="card-img">
+          <div class="card-body">
+            <span class="card-cat">Guitarras Ac&uacute;sticas</span>
+            <h3 class="card-title">Guitarra Ac&uacute;stica Folk</h3>
+            <p class="card-brand">Yamaha F310</p>
+            <div class="card-precio"><span class="precio-oferta">$114.990</span></div>
+            <div class="card-actions">
+              <a href="detalle.html?id=GA001" class="btn-secondary">Ver detalle</a>
+              <button class="btn-primary" onclick="addToCart('GA001')">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <span class="badge-oferta">OFERTA</span>
+          <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?w=500" alt="Guitarra Epiphone Les Paul" class="card-img">
+          <div class="card-body">
+            <span class="card-cat">Guitarras El&eacute;ctricas</span>
+            <h3 class="card-title">Guitarra El&eacute;ctrica Les Paul</h3>
+            <p class="card-brand">Epiphone Les Paul Std</p>
+            <div class="card-precio"><span class="precio-oferta">$299.990</span></div>
+            <div class="card-actions">
+              <a href="detalle.html?id=GE002" class="btn-secondary">Ver detalle</a>
+              <button class="btn-primary" onclick="addToCart('GE002')">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-producto">
+          <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=500" alt="Teclado Casio" class="card-img">
+          <div class="card-body">
+            <span class="card-cat">Teclados</span>
+            <h3 class="card-title">Teclado Sintetizador 61 Teclas</h3>
+            <p class="card-brand">Casio CTX700</p>
+            <div class="card-precio"><span class="precio-oferta">$199.990</span></div>
+            <div class="card-actions">
+              <a href="detalle.html?id=TE001" class="btn-secondary">Ver detalle</a>
+              <button class="btn-primary" onclick="addToCart('TE001')">Agregar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="info-section">
+      <h2 class="section-title">Qui&eacute;nes Somos</h2>
+      <p style="text-align:center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+        <strong>Sonido Vivo</strong> es una tienda especializada en instrumentos musicales y audio profesional con m&aacute;s de 11 a&ntilde;os de trayectoria en la ciudad de Vi&ntilde;a del Mar. Nuestro prop&oacute;sito es equipar a m&uacute;sicos principiantes y profesionales con las mejores marcas, brindando asesor&iacute;a t&eacute;cnica cercana y confiable. Este e-commerce ha sido desarrollado por nuestro equipo académico para modernizar la atención a clientes de todo Chile.
+      </p>
+    </section>
+
+    <!-- CONTÁCTANOS & UBICACIÓN MAPS -->
+    <section id="contacto" class="info-section">
+      <h2 class="section-title">Cont&aacute;ctanos</h2>
+      <div class="contacto-container">
+        <div>
+          <h3>Nuestra Tienda F&iacute;sica</h3>
+          <p style="margin-bottom:15px; color:var(--text-muted);">Vis&iacute;tanos en Vi&ntilde;a del Mar, Regi&oacute;n de Valpara&iacute;so.</p>
+          <iframe class="mapa-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.88931298415!2d-71.55183422346764!3d-33.01853617658742!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689de0f83cf1341%3A0x7d2f9b8c0df1b8a1!2sVi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <form id="contact-form" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! Nos contactaremos a la brevedad.'); this.reset();">
+          <h3>Env&iacute;anos tu consulta</h3>
+          <div class="form-group">
+            <label for="c-nombre">Nombre Completo</label>
+            <input type="text" id="c-nombre" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="c-correo">Correo Electr&oacute;nico</label>
+            <input type="email" id="c-correo" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="c-mensaje">Mensaje</label>
+            <textarea id="c-mensaje" rows="4" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Enviar Mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Sonido Vivo - Tienda de Instrumentos Musicales</strong></p>
+    <p>Desarrollado por: Equipo de Desarrollo Web</p>
+    <p>Asignatura: <strong>DSY1104 &ndash; 2026</strong> | Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>|

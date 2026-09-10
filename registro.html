@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario - Sonido Vivo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-icon">🎸</span>
+      <h1>SONIDO VIVO</h1>
+    </a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+        <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="auth-card">
+      <h2 class="section-title">Registro de Usuario</h2>
+      <form id="registro-form" novalidate>
+        
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" class="form-control" autocomplete="given-name">
+          <span class="error-msg" id="error-nombre"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" class="form-control" autocomplete="family-name">
+          <span class="error-msg" id="error-apellido"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="fechaNacimiento">Fecha de Nacimiento (M&iacute;nimo 14 a&ntilde;os)</label>
+          <input type="date" id="fechaNacimiento" class="form-control">
+          <span class="error-msg" id="error-fechaNacimiento"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo Electr&oacute;nico (@duoc.cl)</label>
+          <input type="email" id="correo" class="form-control" placeholder="usuario@duoc.cl" autocomplete="email">
+          <span class="error-msg" id="error-correo"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contrase&ntilde;a (Min. 8 car&aacute;cteres, 1 may&uacute;scula, 1 n&uacute;mero)</label>
+          <input type="password" id="password" class="form-control">
+          <span class="error-msg" id="error-password"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirmar Contrase&ntilde;a</label>
+          <input type="password" id="confirmPassword" class="form-control">
+          <span class="error-msg" id="error-confirmPassword"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="direccion">Direcci&oacute;n</label>
+          <input type="text" id="direccion" class="form-control">
+          <span class="error-msg" id="error-direccion"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="region">Regi&oacute;n</label>
+          <select id="region" class="form-control">
+            <option value="">-- Seleccionar Regi&oacute;n --</option>
+            <option value="Valparaíso">Regi&oacute;n de Valpara&iacute;so</option>
+            <option value="Metropolitana">Regi&oacute;n Metropolitana</option>
+            <option value="Biobío">Regi&oacute;n del Biob&iacute;o</option>
+          </select>
+          <span class="error-msg" id="error-region"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="genero">G&eacute;nero</label>
+          <select id="genero" class="form-control">
+            <option value="">-- Seleccionar G&eacute;nero --</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Otro">Otro / Prefiero no decir</option>
+          </select>
+          <span class="error-msg" id="error-genero"></span>
+        </div>
+
+        <div class="form-group" style="flex-direction:row; gap:10px; align-items:center;">
+          <input type="checkbox" id="terminos">
+          <label for="terminos" style="margin:0;">Acepto los t&eacute;rminos y condiciones</label>
+        </div>
+        <span class="error-msg" id="error-terminos"></span>
+
+        <button type="submit" class="btn-primary" style="width:100%; margin-top:15px;">Registrarse</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>Sonido Vivo - Tienda de Instrumentos Musicales</strong></p>
+    <p>Asignatura: <strong>DSY1104 &ndash; 2026</strong> | Duoc UC</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/registro.js"></script>
+</body>
+</html>
